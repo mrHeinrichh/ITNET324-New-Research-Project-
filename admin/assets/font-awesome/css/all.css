@@ -381,7 +381,7 @@ readers do not read off random characters that represent icons */
 .fa-arrows-alt-v:before {
   content: "\f338"; }
 
-.fa-artstation:before {
+.fa-artoutpost:before {
   content: "\f77a"; }
 
 .fa-assistive-listening-systems:before {
@@ -840,7 +840,7 @@ readers do not read off random characters that represent icons */
 .fa-chalkboard-teacher:before {
   content: "\f51c"; }
 
-.fa-charging-station:before {
+.fa-charging-outpost:before {
   content: "\f5e7"; }
 
 .fa-chart-area:before {
@@ -2943,7 +2943,7 @@ readers do not read off random characters that represent icons */
 .fa-play-circle:before {
   content: "\f144"; }
 
-.fa-playstation:before {
+.fa-playoutpost:before {
   content: "\f3df"; }
 
 .fa-plug:before {

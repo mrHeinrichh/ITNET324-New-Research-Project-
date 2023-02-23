@@ -28,7 +28,7 @@
                     <tbody>
 			          <?php
                       $i = 1;
-                      $qry = $conn->query("SELECT c.*,rt.name as rname,s.name as sname,u.name as uname,ca.remarks FROM complaints c inner join complaints_action ca on ca.complaint_id = c.id inner join responders_team rt on ca.responder_id = rt.id inner join stations s on s.id = rt.station_id inner join users u on u.id = ca.dispatched_by where c.status = 3 and date_format(c.date_created,'%Y-%m') = '$month' order by unix_timestamp(c.date_created) desc ");
+                      $qry = $conn->query("SELECT c.*,rt.name as rname,s.name as sname,u.name as uname,ca.remarks FROM complaints c inner join complaints_action ca on ca.complaint_id = c.id inner join responders_team rt on ca.responder_id = rt.id inner join outpost s on s.id = rt.outpost_id inner join users u on u.id = ca.dispatched_by where c.status = 3 and date_format(c.date_created,'%Y-%m') = '$month' order by unix_timestamp(c.date_created) desc ");
                       if($qry->num_rows > 0):
 			          while($row = $qry->fetch_array()):
 			          ?>

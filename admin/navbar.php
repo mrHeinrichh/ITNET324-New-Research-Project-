@@ -16,7 +16,7 @@
 				<div class="mx-2 text-white">Master List</div>
 				<a href="index.php?page=complainants" class="nav-item nav-complainants"><span class='icon-field'><i class="fa fa-user-secret "></i></span> Complainants</a>
 				<a href="index.php?page=responders" class="nav-item nav-responders"><span class='icon-field'><i class="fa fa-user-shield "></i></span> Responders</a>
-				<a href="index.php?page=stations" class="nav-item nav-stations"><span class='icon-field'><i class="fa fa-building "></i></span> Outpost</a>
+				<a href="index.php?page=outpost" class="nav-item nav-outpost"><span class='icon-field'><i class="fa fa-building "></i></span> Outpost</a>
 				<div class="mx-2 text-white">Report</div>
 				<a href="index.php?page=complaints_report" class="nav-item nav-complaints_report"><span class='icon-field'><i class="fa fa-th-list"></i></span> Complaints Report</a>
 				<div class="mx-2 text-white">Systems</div>

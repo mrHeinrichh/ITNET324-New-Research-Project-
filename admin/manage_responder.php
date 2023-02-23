@@ -12,14 +12,14 @@ foreach($qry->fetch_array() as $k => $val){
 		<input type="hidden" name="id" value="<?php echo isset($id) ? $id : '' ?>">
 		<div id="msg" class="form-group"></div>
 		<div class="form-group">
-			<label for="" class="control-label">Station</label>
-			<select name="station_id" id="" class="custom-select select2">
+			<label for="" class="control-label">Outpost</label>
+			<select name="outpost_id" id="" class="custom-select select2">
 				<option value=""></option>
 				<?php
-					$qry = $conn->query("SELECT * FROM stations order by name asc");
+					$qry = $conn->query("SELECT * FROM outpost order by name asc");
 					while($row= $qry->fetch_array()):
 				?>
-				<option value="<?php echo $row['id'] ?>" <?php echo isset($station_id) && $station_id == $row['id'] ? 'selected' : '' ?>><?php echo ucwords($row['name']) ?></option>
+				<option value="<?php echo $row['id'] ?>" <?php echo isset($outpost_id) && $outpost_id == $row['id'] ? 'selected' : '' ?>><?php echo ucwords($row['name']) ?></option>
 			<?php endwhile; ?>
 			</select>
 		</div>

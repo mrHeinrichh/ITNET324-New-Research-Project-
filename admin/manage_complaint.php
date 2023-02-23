@@ -36,7 +36,7 @@
 					<select name="responder_id" id="" class="custom-select input-sm select2">
 						<option value=""></option>
 						<?php
-							$complaints = $conn->query("SELECT rt.*,s.name as sname,s.address FROM responders_team rt inner join stations s on s.id = rt.station_id where rt.availability = 1 ".(isset($ca['responder_id']) ? " or rt.id = {$ca['responder_id']}" : '')." order by rt.name asc ");
+							$complaints = $conn->query("SELECT rt.*,s.name as sname,s.address FROM responders_team rt inner join outpost s on s.id = rt.outpost_id where rt.availability = 1 ".(isset($ca['responder_id']) ? " or rt.id = {$ca['responder_id']}" : '')." order by rt.name asc ");
 							while($row= $complaints->fetch_assoc()):
 						?>
 						<option value="<?php echo $row['id'] ?>" <?php echo isset($ca['responder_id']) && $ca['responder_id'] == 1 ? 'selected' : '' ?>><?php echo $row['sname'].' - '. $row['name'] ?></option>

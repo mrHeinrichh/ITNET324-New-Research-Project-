@@ -2764,7 +2764,7 @@
 .bx-star:before {
   content: "\ebea";
 }
-.bx-station:before {
+.bx-outpost:before {
   content: "\ebeb";
 }
 .bx-stats:before {
@@ -3862,7 +3862,7 @@
 .bxs-error-circle:before {
   content: "\ed58";
 }
-.bxs-ev-station:before {
+.bxs-ev-outpost:before {
   content: "\ed59";
 }
 .bxs-exit:before {

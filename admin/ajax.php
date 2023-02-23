@@ -54,13 +54,13 @@ if($action == "save_page_img"){
 		echo $save;
 }
 
-if($action == "save_station"){
-	$save = $crud->save_station();
+if($action == "save_outpost"){
+	$save = $crud->save_outpost();
 	if($save)
 		echo $save;
 }
-if($action == "delete_station"){
-	$save = $crud->delete_station();
+if($action == "delete_outpost"){
+	$save = $crud->delete_outpost();
 	if($save)
 		echo $save;
 }

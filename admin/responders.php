@@ -37,15 +37,15 @@
 								<tr>
 									<th class="text-center">#</th>
 									<th class="">Team Name</th>
-									<th class="">Station</th>
-									<th class="">Station Address</th>
+									<th class="">Outpost</th>
+									<th class="">Outpost Address</th>
 									<th class="text-center">Action</th>
 								</tr>
 							</thead>
 							<tbody>
 								<?php 
 								$i = 1;
-								$responder = $conn->query("SELECT rt.*,s.name as sname,s.address FROM responders_team rt inner join stations s on s.id = rt.station_id order by rt.name asc ");
+								$responder = $conn->query("SELECT rt.*,s.name as sname,s.address FROM responders_team rt inner join outpost s on s.id = rt.outpost_id order by rt.name asc ");
 								while($row=$responder->fetch_assoc()):
 								?>
 								<tr>

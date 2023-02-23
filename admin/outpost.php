@@ -28,7 +28,7 @@
 				<div class="card">
 					<div class="card-header">
 						<b>List of Outposts</b>
-						<span class="float:right"><a class="btn btn-primary btn-block btn-sm col-sm-2 float-right" href="javascript:void(0)" id="new_station">
+						<span class="float:right"><a class="btn btn-primary btn-block btn-sm col-sm-2 float-right" href="javascript:void(0)" id="new_outpost">
 					<i class="fa fa-plus"></i> New Outpost
 				</a></span>
 					
@@ -48,8 +48,8 @@
 							<tbody>
 								<?php 
 								$i = 1;
-								$station = $conn->query("SELECT * FROM stations  order by name asc ");
-								while($row=$station->fetch_assoc()):
+								$outpost = $conn->query("SELECT * FROM outpost  order by name asc ");
+								while($row=$outpost->fetch_assoc()):
 								?>
 								<tr>
 									<td class="text-center"><?php echo $i++ ?></td>
@@ -64,8 +64,8 @@
 										 <p><small><i><b><?php echo $row['address'] ?></i></small></p>
 									</td>
 									<td class="text-center">
-										<button class="btn btn-sm btn-outline-primary edit_station" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
-										<button class="btn btn-sm btn-outline-danger delete_station" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
+										<button class="btn btn-sm btn-outline-primary edit_outpost" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
+										<button class="btn btn-sm btn-outline-danger delete_outpost" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
 									</td>
 								</tr>
 								<?php endwhile; ?>
@@ -96,17 +96,17 @@
 	$(document).ready(function(){
 		$('table').dataTable()
 	})
-	$('#new_station').click(function(){
-		uni_modal("New Station","manage_station.php","")
+	$('#new_outpost').click(function(){
+		uni_modal("New outpost","manage_outpost.php","")
 		
 	})
 
-	$('.edit_station').click(function(){
-		uni_modal("Manage Station Details","manage_station.php?id="+$(this).attr('data-id'))
+	$('.edit_outpost').click(function(){
+		uni_modal("Manage outpost Details","manage_outpost.php?id="+$(this).attr('data-id'))
 		
 	})
-	$('.delete_station').click(function(){
-		_conf("Are you sure to delete this station?","delete_station",[$(this).attr('data-id')])
+	$('.delete_outpost').click(function(){
+		_conf("Are you sure to delete this outpost?","delete_outpost",[$(this).attr('data-id')])
 	})
 	
 	$('#check_all').click(function(){
@@ -138,7 +138,7 @@
 		$.ajax({
 			url:'print_barcode.php',
 			method:'POST',
-			data:{tbl:'stations',ids:chk},
+			data:{tbl:'outpost',ids:chk},
 			success:function(resp){
 				if(resp){
 					var nw = window.open("","_blank","height=800,width=900")
@@ -155,10 +155,10 @@
 			}
 		})
 	})
-	function delete_station($id){
+	function delete_outpost($id){
 		start_load()
 		$.ajax({
-			url:'ajax.php?action=delete_station',
+			url:'ajax.php?action=delete_outpost',
 			method:'POST',
 			data:{id:$id},
 			success:function(resp){

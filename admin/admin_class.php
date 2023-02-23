@@ -248,7 +248,7 @@ Class Action {
 				}
 			}
 		}
-		$check = $this->db->query("SELECT * FROM responders_team where name ='$name' and station_id = '$station_id' ".(!empty($id) ? " and id != {$id} " : ''))->num_rows;
+		$check = $this->db->query("SELECT * FROM responders_team where name ='$name' and outpost_id = '$outpost_id' ".(!empty($id) ? " and id != {$id} " : ''))->num_rows;
 		if($check > 0){
 			return 2;
 			exit;
@@ -271,7 +271,7 @@ Class Action {
 			return 1;
 		}
 	}
-	function save_station(){
+	function save_outpost(){
 		extract($_POST);
 		$data = "";
 		foreach($_POST as $k => $v){
@@ -283,25 +283,25 @@ Class Action {
 				}
 			}
 		}
-		$check = $this->db->query("SELECT * FROM stations where name ='$name' ".(!empty($id) ? " and id != {$id} " : ''))->num_rows;
+		$check = $this->db->query("SELECT * FROM outpost where name ='$name' ".(!empty($id) ? " and id != {$id} " : ''))->num_rows;
 		if($check > 0){
 			return 2;
 			exit;
 		}
 		if(empty($id)){
-			$save = $this->db->query("INSERT INTO stations set $data");
+			$save = $this->db->query("INSERT INTO outpost set $data");
 			$nid=$this->db->insert_id;
 		}else{
-			$save = $this->db->query("UPDATE stations set $data where id = $id");
+			$save = $this->db->query("UPDATE outpost set $data where id = $id");
 		}
 
 		if($save){
 			return 1;
 		}
 	}
-	function delete_station(){
+	function delete_outpost(){
 		extract($_POST);
-		$delete = $this->db->query("DELETE FROM stations where id = ".$id);
+		$delete = $this->db->query("DELETE FROM outpost where id = ".$id);
 		if($delete){
 			return 1;
 		}

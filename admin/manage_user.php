@@ -22,7 +22,7 @@ foreach($user->fetch_array() as $k =>$v){
 			<input type="text" name="username" id="username" class="form-control" value="<?php echo isset($meta['username']) ? $meta['username']: '' ?>" required  autocomplete="off">
 		</div>
 		<div class="form-group">
-			<label for="password">Password</label>
+			<label for="password">Password</label>	
 			<input type="password" name="password" id="password" class="form-control" value="" autocomplete="off">
 			<?php if(isset($meta['id'])): ?>
 			<small><i>Leave this blank if you dont want to change the password.</i></small>

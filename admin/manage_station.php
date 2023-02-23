@@ -1,14 +1,14 @@
 <?php 
 include 'db_connect.php'; 
 if(isset($_GET['id'])){
-$qry = $conn->query("SELECT * FROM stations where id= ".$_GET['id']);
+$qry = $conn->query("SELECT * FROM outpost where id= ".$_GET['id']);
 foreach($qry->fetch_array() as $k => $val){
     $$k=$val;
 }
 }
 ?>
 <div class="container-fluid">
-    <form action="" id="manage-station">
+    <form action="" id="manage-outpost">
         <input type="hidden" name="id" value="<?php echo isset($id) ? $id : '' ?>">
         <div id="msg" class="form-group"></div>
         <div class="form-group">
@@ -22,16 +22,16 @@ foreach($qry->fetch_array() as $k => $val){
     </form>
 </div>
 <script>
-    $('#manage-station').on('reset',function(){
+    $('#manage-outpost').on('reset',function(){
         $('#msg').html('')
         $('input:hidden').val('')
     })
-    $('#manage-station').submit(function(e){
+    $('#manage-outpost').submit(function(e){
         e.preventDefault()
         start_load()
         $('#msg').html('')
         $.ajax({
-            url:'ajax.php?action=save_station',
+            url:'ajax.php?action=save_outpost',
             data: new FormData($(this)[0]),
             cache: false,
             contentType: false,
@@ -45,7 +45,7 @@ foreach($qry->fetch_array() as $k => $val){
                             location.reload()
                         },1000)
                 }else if(resp == 2){
-                $('#msg').html('<div class="alert alert-danger mx-2">Station Name already exist.</div>')
+                $('#msg').html('<div class="alert alert-danger mx-2">outpost Name already exist.</div>')
                 end_load()
                 }   
             }
