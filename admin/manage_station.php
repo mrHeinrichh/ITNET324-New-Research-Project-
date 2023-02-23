@@ -19,6 +19,10 @@ foreach($qry->fetch_array() as $k => $val){
             <label for="" class="control-label">Address</label>
             <textarea name="address" id="" cols="30" rows="4" class="form-control" required=""><?php echo isset($address) ? $address :'' ?></textarea>
         </div>
+        <div class="form-group">
+            <label for="" class="control-label">Contact</label>
+            <textarea name="contact" id="" cols="30" rows="4" class="form-control" required=""><?php echo isset($contact) ? $contact :'' ?></textarea>
+        </div>
     </form>
 </div>
 <script>

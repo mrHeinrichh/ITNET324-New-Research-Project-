@@ -15,6 +15,8 @@ include 'db_connect.php';
 			            <th width="20%">Report</th>
 			            <th width="20%">Incident Address</th>
 			            <th width="10%">Status</th>
+			      
+
 			            <th width="10%">Action</th>
 			          </tr>
 			        </thead>
@@ -22,6 +24,7 @@ include 'db_connect.php';
 			          <?php
 			          $status = array("","Pending","Received","Action Made");
 			          $qry = $conn->query("SELECT * FROM complaints order by unix_timestamp(date_created) desc ");
+					 
 			          while($row = $qry->fetch_array()):
 			          ?>
 			          <tr class="<?php echo $row['status'] == 1 ? 'border-alert' : '' ?>">
@@ -29,6 +32,11 @@ include 'db_connect.php';
 			            <td><?php echo $row['message'] ?></td>
 			            <td><?php echo $row['address'] ?></td>
 			            <td><?php echo $status[$row['status']] ?></td>
+	
+
+
+			  
+
 			            <td class="text-center">
 			            	<button class="btn btn-primary btn-sm m-0 view_btn" type="button" data-id="<?php echo $row['id'] ?>">View</button>
 			            </td>

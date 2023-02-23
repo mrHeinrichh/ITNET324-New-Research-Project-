@@ -61,7 +61,7 @@
 									</td>
 									<!-- for contact number  -->
 									<td class="">
-										 <p><small><i><b><?php echo $row['address'] ?></i></small></p>
+										 <p><small><i><b><?php echo $row['contact'] ?></i></small></p>
 									</td>
 									<td class="text-center">
 										<button class="btn btn-sm btn-outline-primary edit_station" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>

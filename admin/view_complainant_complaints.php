@@ -9,7 +9,7 @@ include 'db_connect.php';
             <th width="30%">Report</th>
             <th width="30%">Incident Address</th>
             <th width="10%">Status</th>
-			<!-- <th width="30%">Remarks</th> -->
+		
 
           </tr>
         </thead>
@@ -24,7 +24,7 @@ include 'db_connect.php';
             <td><?php echo $row['message'] ?></td>
             <td><?php echo $row['address'] ?></td>
             <td><?php echo $status[$row['status']] ?></td>
-			<!-- <td><?php echo $status[$row['status']] ?></td> -->
+
 
           </tr>
         <?php endwhile; ?>

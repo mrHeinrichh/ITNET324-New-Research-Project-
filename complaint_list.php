@@ -56,14 +56,21 @@ include 'admin/db_connect.php';
             <th width="30%">Report</th>
             <th width="30%">Incident Address</th>
             <th width="10%">Status</th>
-            <!-- dagdag -->
-            <!-- <th width="30%">Remarks</th> -->
+            <th width="10%">Remarks</th>
+
+          
+   
           </tr>
         </thead>
         <tbody>
           <?php
           $status = array("","Pending","Received","Action Made");
-          $qry = $conn->query("SELECT * FROM complaints where complainant_id = {$_SESSION['login_id']} order by unix_timestamp(date_created) desc ");
+          $qry = $conn->query("SELECT c.*, ca.remarks
+          FROM complaints c
+          LEFT JOIN complaints_action ca ON c.id = ca.complaint_id
+          WHERE c.complainant_id = {$_SESSION['login_id']}
+          ORDER BY UNIX_TIMESTAMP(c.date_created) DESC
+          ");
           // $qry = $conn->query("SELECT c.message, c.address, c.status, c.date_created, ca.remarks FROM complaints c INNER JOIN ca complaints_action ON (c.id = ca.complaint_id) WHERE ca.complainant_id = {$_SESSION['login_id']} order by unix_timestamp(date_created) desc ");
           while($row = $qry->fetch_array()):
           ?>
@@ -72,8 +79,9 @@ include 'admin/db_connect.php';
             <td><?php echo $row['message'] ?></td>
             <td><?php echo $row['address'] ?></td>
             <td><?php echo $status[$row['status']] ?></td>
-            <!-- dagdag -->
-            <!-- <td><?php echo $row['remarks'] ?></td> -->
+            <td><?php echo $row['remarks'] ?></td>
+
+
           </tr>
         <?php endwhile; ?>
 
