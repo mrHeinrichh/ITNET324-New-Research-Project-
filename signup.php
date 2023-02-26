@@ -9,8 +9,9 @@ if(isset($_SESSION['login_id'])){
 }
 ?>
 <div class="container-fluid">
-	<form action="" id="signup-frm">
+	<form action="" id="signup-frm" enctype="multipart/form-data">
 		<input type="hidden" name="id" value="<?php echo isset($id) ? $id : '' ?>">
+	
 		<div class="form-group">
 			<label for="" class="control-label">Name</label>
 			<input type="text" name="name" required="" class="form-control" value="<?php echo isset($name) ? $name : '' ?>">
@@ -34,10 +35,15 @@ if(isset($_SESSION['login_id'])){
 				<small><i>Leave this field blank if you dont want to change your password.</i></small>
 			<?php endif; ?>
 		</div>
+		<div class="form-group">
+			<label for="" class="control-label">Image</label>
+			<input type="file" name="image" class="form-control">
+		</div>
 		<button class="button btn btn-primary btn-sm">Create</button>
 		<button class="button btn btn-secondary btn-sm" type="button" data-dismiss="modal">Cancel</button>
 
 	</form>
+
 </div>
 
 <style>
