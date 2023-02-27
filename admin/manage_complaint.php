@@ -45,6 +45,7 @@
 				</div>
 			</div>
 
+		
 			<div class="action_made" style="display:none">
 				<div class="form-group">
 					<label for="" class="control-label">Remarks</label>
@@ -62,7 +63,7 @@
 	$('#status').change(function(){
 		if($(this).val() == 2){
 			$('.assign-responder').show()
-			$('.action_made').hide()
+			$('.action_made').show()
 		}else if($(this).val() == 3){
 			$('.assign-responder').hide()
 			$('.action_made').show()

@@ -360,6 +360,7 @@ Class Action {
 				if($chk->num_rows > 0){
 					$res = $chk->fetch_array();
 					$save2 = $this->db->query("UPDATE complaints_action $data where complaint_id = $id");
+					$save3 = $this->db->query("UPDATE complaints_action set status = 1 , remarks = '$remarks' where complaint_id = $id");
 				}else{
 					$save2 = $this->db->query("INSERT INTO complaints_action set $data");
 				}
