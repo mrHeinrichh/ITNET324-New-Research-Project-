@@ -56,6 +56,18 @@ if($qry->num_rows > 0){
 		$meta[$k] = $val;
 	}
 }
+
+// start session if it's not already started
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// check if user is not logged in or is not an admin
+if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1'){
+   echo "No access to this";
+   echo "<script>window.location.href = 'error.html';</script>";
+    exit();
+  }
  ?>
 <div class="container-fluid">
 	
