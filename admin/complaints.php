@@ -1,5 +1,16 @@
 <?php
 include 'db_connect.php';
+// start session if it's not already started
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// check if user is not logged in or is not an admin
+if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
+   echo "No access to this";
+   echo "<script>window.location.href = 'error.html';</script>";
+    exit();
+  }
 ?>
 <div class="container-fluid">
 	<div class="col-lg-12">
