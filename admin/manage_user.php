@@ -8,17 +8,16 @@ foreach($user->fetch_array() as $k =>$v){
 }
 }
 ?>
+
 <div class="container-fluid">
 	<div id="msg"></div>
 	<form action="" id="manage-user" enctype="multipart/form-data">
 
 
 		<input type="hidden" name="id" value="<?php echo isset($meta['id']) ? $meta['id']: '' ?>">
-		<div class="form-group">
-    <label for="image">Image</label>
-    <input type="file" name="image" id="image" class="form-control-file">
-</div>
-
+		<?php if (isset($meta['image'])): ?>
+        <img src="<?php echo $meta['image']; ?>" alt="User Image" style="max-width: 100px;">
+    <?php endif; ?>
 
 		<div class="form-group">
 			<label for="name">Name</label>

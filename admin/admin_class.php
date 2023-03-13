@@ -383,14 +383,32 @@ Class Action {
 	}
 	function complaint(){
 		extract($_POST);
-			$data = " complainant_id = '{$_SESSION['login_id']}' ";
-			$data .= ",message ='$message' ";
-			$data .= ",address ='$address' ";
-
-			$save = $this->db->query("INSERT INTO complaints set $data");
-			if($save)
-				return 1;
+		$data = " complainant_id = '{$_SESSION['login_id']}' ";
+		$data .= ",message ='$message' ";
+		$data .= ",address ='$address' ";
+		$data .= ",street = '$street'"; 
+	
+		// save image
+		if(isset($_FILES['image']['name']) && $_FILES['image']['name'] != ''){
+			$image = $_FILES['image']['name'];
+			$tmp_name = $_FILES['image']['tmp_name'];
+			$ext = pathinfo($image, PATHINFO_EXTENSION);
+			$allowed_ext = array('jpg','jpeg','png','gif');
+			if(!in_array($ext, $allowed_ext)){
+				return 3; // invalid image format
+				exit;
+			}
+			$new_image_name = md5($image.microtime()).'.'.$ext;
+			$data .= ", image = 'uploads/$new_image_name' "; // save file path in database
+			move_uploaded_file($tmp_name, 'uploads/'.$new_image_name); // move file to destination folder
+		}
+	
+		$save = $this->db->query("INSERT INTO complaints set $data");
+		if($save){
+			return 1;
+		}
 	}
+	
 	function manage_complaint(){
 		extract($_POST);
 		$save = $this->db->query("UPDATE complaints set status = $status where id = $id");
