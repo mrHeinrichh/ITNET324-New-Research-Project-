@@ -57,15 +57,37 @@ Class Action {
 	}
 
 	function save_user(){
+		
 		extract($_POST);
 		$data = " name = '$name' ";
 		$data .= ", username = '$username' ";
 		if(!empty($password))
-		$data .= ", password = '".md5($password)."' ";
-		$data .= ", type = '$type' ";
-		$chk = $this->db->query("Select * from users where username = '$username' and id !='$id' ")->num_rows;
+			$data .= ", password = '".md5($password)."' ";
+		if(isset($type))
+			$data .= ", type = '$type' ";
+	
+		// save image
+		if(isset($_FILES['image']['name']) && $_FILES['image']['name'] != ''){
+			$image = $_FILES['image']['name'];
+			$tmp_name = $_FILES['image']['tmp_name'];
+			$ext = pathinfo($image, PATHINFO_EXTENSION);
+			$allowed_ext = array('jpg','jpeg','png','gif');
+			if(!in_array($ext, $allowed_ext)){
+				return 3; // invalid image format
+				exit;
+			}
+			$new_image_name = md5($image.microtime()).'.'.$ext;
+			$data .= ", image = 'uploads/$new_image_name' "; // save file path in database
+			move_uploaded_file($tmp_name, 'uploads/'.$new_image_name); // move file to destination folder
+		}
+	
+		if(isset($id) && !empty($id)) {
+			$chk = $this->db->query("Select * from users where username = '$username' and id !='$id' ")->num_rows;
+		} else {
+			$chk = $this->db->query("Select * from users where username = '$username'")->num_rows;
+		}
 		if($chk > 0){
-			return 2;
+			return 2; // duplicate username
 			exit;
 		}
 		if(empty($id)){
@@ -74,9 +96,12 @@ Class Action {
 			$save = $this->db->query("UPDATE users set ".$data." where id = ".$id);
 		}
 		if($save){
-			return 1;
+			return 1; // success
 		}
+	
 	}
+	
+	
 
 	function delete_user(){
 		extract($_POST);

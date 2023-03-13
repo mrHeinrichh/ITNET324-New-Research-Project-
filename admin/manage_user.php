@@ -10,9 +10,16 @@ foreach($user->fetch_array() as $k =>$v){
 ?>
 <div class="container-fluid">
 	<div id="msg"></div>
-	
-	<form action="" id="manage-user">	
+	<form action="" id="manage-user" enctype="multipart/form-data">
+
+
 		<input type="hidden" name="id" value="<?php echo isset($meta['id']) ? $meta['id']: '' ?>">
+		<div class="form-group">
+    <label for="image">Image</label>
+    <input type="file" name="image" id="image" class="form-control-file">
+</div>
+
+
 		<div class="form-group">
 			<label for="name">Name</label>
 			<input type="text" name="name" id="name" class="form-control" value="<?php echo isset($meta['name']) ? $meta['name']: '' ?>" required>
@@ -48,24 +55,33 @@ foreach($user->fetch_array() as $k =>$v){
 <script>
 	
 	$('#manage-user').submit(function(e){
-		e.preventDefault();
-		start_load()
-		$.ajax({
-			url:'ajax.php?action=save_user',
-			method:'POST',
-			data:$(this).serialize(),
-			success:function(resp){
-				if(resp ==1){
-					alert_toast("Data successfully saved",'success')
-					setTimeout(function(){
-						location.reload()
-					},1500)
-				}else{
-					$('#msg').html('<div class="alert alert-danger">Username already exist</div>')
-					end_load()
-				}
-			}
-		})
-	})
+    e.preventDefault();
+    start_load()
+    var formData = new FormData(this); // create a FormData object from the form
+   $.ajax({
+    url:'ajax.php?action=save_user',
+    method:'POST',
+    data:formData,
+    contentType:false,
+    processData:false,
+    success:function(resp){
+        console.log(resp);
+        if(resp == 1){
+            $('#msg').html('<div class="alert alert-success">User saved successfully.</div>');
+            setTimeout(function(){
+                location.reload()
+            },1500)
+        }else if(resp == 2){
+            $('#msg').html('<div class="alert alert-danger">Username already exists.</div>');
+        }else if(resp == 3){
+            $('#msg').html('<div class="alert alert-danger">Invalid image format.</div>');
+        }
+        end_load()
+    }
+})
+
+})
+
+
 
 </script>
