@@ -7,7 +7,7 @@
 			<textarea cols="30" rows="3" name="message" required="" class="form-control"></textarea>
 		</div>
 		<div class="form-group">
-			<label for="" class="control-label">Incident Address</label>
+			<label for="" class="control-label">Incident Address (House #, Lot #, Purok #)</label>
 			<textarea cols="30" rows="3" name="address" required="" class="form-control"></textarea>
 		</div>
 		<button class="button btn btn-primary btn-sm">Create</button>

@@ -86,35 +86,53 @@ Class Action {
 	}
 	function signup(){
 		extract($_POST);
+	
+		$image_path = '';
+		if(isset($_FILES['image']) && $_FILES['image']['tmp_name'] != ''){
+			$temp = explode(".", $_FILES['image']['name']);
+			$newfilename = round(microtime(true)) . '.' . end($temp);
+			move_uploaded_file($_FILES['image']['tmp_name'], 'assets/uploads/' . $newfilename);
+			$image_path = 'assets/uploads/' . $newfilename;
+		}
+	
 		$data = " name = '$name' ";
 		$data .= ", email = '$email' ";
 		$data .= ", address = '$address' ";
 		$data .= ", contact = '$contact' ";
 		$data .= ", password = '".md5($password)."' ";
+		$data .= ", image = '$image_path' ";
+	
 		$chk = $this->db->query("SELECT * from complainants where email ='$email' ".(!empty($id) ? " and id != '$id' " : ''))->num_rows;
 		if($chk > 0){
 			return 3;
 			exit;
-		}
-		if(empty($id))
-			$save = $this->db->query("INSERT INTO complainants set $data");
-		else
-			$save = $this->db->query("UPDATE complainants set $data where id=$id ");
-		if($save){
-			if(empty($id))
-				$id = $this->db->insert_id;
+		} else {
+			if(empty($id)) {
+				$save = $this->db->query("INSERT INTO complainants set $data");
+			} else {
+				$save = $this->db->query("UPDATE complainants set $data where id=$id ");
+			}
+			if($save){
+				if(empty($id)) {
+					$id = $this->db->insert_id;
+				}
 				$qry = $this->db->query("SELECT * FROM complainants where id = $id ");
 				if($qry->num_rows > 0){
 					foreach ($qry->fetch_array() as $key => $value) {
 						if($key != 'password' && !is_numeric($key))
 							$_SESSION['login_'.$key] = $value;
 					}
-						return 1;
-				}else{
+					return 1;
+				} else {
 					return 3;
 				}
+			} else {
+				return 2; // return 2 if the query fails to save the data
+			}
 		}
 	}
+	
+	
 	function update_account(){
 		extract($_POST);
 		$data = " name = '".$firstname.' '.$lastname."' ";
