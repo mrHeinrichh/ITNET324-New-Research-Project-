@@ -387,6 +387,8 @@ Class Action {
 		$data .= ",message ='$message' ";
 		$data .= ",address ='$address' ";
 		$data .= ",street = '$street'"; 
+		$data .= ",reports = '$reports'"; 
+
 	
 		// save image
 		if(isset($_FILES['image']['name']) && $_FILES['image']['name'] != ''){
