@@ -24,7 +24,16 @@ if(isset($_POST['save_as_image'])) {
 
 <div class="container-fluid">
     <form action="" id="complaint-frm" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="">
+        
+    <input type="hidden" name="id" value="">
+    <label for="reports" class="control-label">Reports</label>
+    <select name="reports" id="reports" class="form-control" required>
+        <option value="">Select a reports</option>
+        <option value="Reports A">Reports A</option>
+        <option value="Reports B">Reports B</option>
+        <option value="Reports C">Reports C</option>
+        <!-- Add more options as needed -->
+    </select>
         <div class="form-group">
             <label for="" class="control-label">Report Message</label>
             <textarea cols="30" rows="3" name="message" required="" class="form-control"></textarea>
