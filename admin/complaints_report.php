@@ -16,6 +16,13 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 <div class="container-fluid">
     <div class="col-lg-12">
         <div class="card">
+					<div class="card-header" style="text-align: center; font-size: 30px;">
+						<b>Complaints Monthly Records</b>
+					</div>
+
+
+
+
             <div class="card_body">
             <div class="row justify-content-center pt-4">
                 <label for="" class="mt-2">Month</label>
@@ -47,8 +54,9 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
                         <td class="text-center"><?php echo $i++ ?></td>
 			            <td><?php echo date('M d, Y h:i A',strtotime($row['date_created'])) ?></td>
 			            <td>
-                            <p><small>Report: <?php echo $row['message'] ?></small></p>
-                            <p><small>Address: <?php echo $row['address'] ?></small></p>
+                            <p>Report Description: <?php echo $row['reports'] ?></p>
+                            <p>Message: <?php echo $row['message'] ?></p>
+                            <p>Address: <?php echo $row['address'] ?></p>
                         </td>
 			            <td><?php echo $row['sname'].' - '.$row['rname'] ?></td>
 			            <td><?php echo ucwords($row['uname']) ?></td>
@@ -84,7 +92,7 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 			border-collapse:collapse
 		}
 		table#report-list td,table#report-list th{
-			border:1px solid
+			border:2px solid
 		}
         p{
             margin:unset;
@@ -103,7 +111,7 @@ $('#print').click(function(){
 		var ns = $('noscript').clone();
             ns.append(_c)
 		var nw = window.open('','_blank','width=900,height=600')
-		nw.document.write('<p class="text-center"><b>Reports as of <?php echo date("F, Y",strtotime($month)) ?></b></p>')
+		nw.document.write('<p class="text-center"><b>Reports for the month of<?php echo date("F, Y",strtotime($month)) ?></b></p>')
 		nw.document.write(ns.html())
 		nw.document.close()
 		nw.print()

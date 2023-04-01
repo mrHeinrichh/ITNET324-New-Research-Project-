@@ -6,7 +6,8 @@ include 'db_connect.php';
         <thead>
           <tr>
             <th width="20%">Date</th>
-            <th width="30%">Report</th>
+			<th width="30%">Report Description</th>
+            <th width="30%">Message</th>
             <th width="30%">Incident Address</th>
             <th width="10%">Status</th>
 		
@@ -21,6 +22,7 @@ include 'db_connect.php';
           ?>
           <tr class="<?php echo $row['status'] == 1 ? 'border-alert' : '' ?>">
             <td><?php echo date('M d, Y h:i A',strtotime($row['date_created'])) ?></td>
+			<td><?php echo $row['reports'] ?></td>
             <td><?php echo $row['message'] ?></td>
             <td><?php echo $row['address'] ?></td>
             <td><?php echo $status[$row['status']] ?></td>

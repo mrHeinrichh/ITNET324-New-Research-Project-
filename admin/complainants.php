@@ -38,8 +38,8 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 			<!-- Table Panel -->
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header">
-						<b>List of Complainant</b>
+					<div class="card-header" style="text-align: center; font-size: 30px;">
+						<b>List of Complainants</b>
 					</div>
 					<div class="card-body">
 						<table class="table table-condensed table-bordered table-hover">
@@ -65,8 +65,11 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 									</td>
 									<td class="">
 										 <p>Contact #: <b><?php echo $row['contact'] ?></b></p>
-										 <p>Address: </b></p>
-										 <p><small><i><b><?php echo $row['address'] ?></i></small></p>
+										 <p>Address: <b><?php echo $row['address'] ?></b></p>
+										 <p>Street: <b><?php echo $row['street'] ?></b></p>
+
+
+
 									</td>
 									<td class='text-center'>
 										

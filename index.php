@@ -27,10 +27,10 @@
         color:black;
       }
       .fr-wrapper {
-          color:white;
-          background: #ffffff08;
+          color:black;
+          background: #FFFFFF;
           padding: 1em 1.5em;
-          border-radius:5px;
+          border-radius:10px;
       }
 
       .masthead{
@@ -95,11 +95,9 @@
         <?php 
         $page = isset($_GET['page']) ? $_GET['page'] : 'home';
         include $page.'.php';
-
         ?>
   </main>
 
-  
 <div class="modal fade" id="confirm_modal" role='dialog'>
     <div class="modal-dialog modal-md" role="document">
       <div class="modal-content">
@@ -145,6 +143,9 @@
       </div>
     </div>
   </div>
+
+
+  
   <div class="modal fade" id="viewer_modal" role='dialog'>
     <div class="modal-dialog modal-md" role="document">
       <div class="modal-content">
@@ -153,6 +154,10 @@
       </div>
     </div>
   </div>
+
+
+
+
   <div id="preloader"></div>
         <footer class=" py-5 bg-dark">
             <div class="container">

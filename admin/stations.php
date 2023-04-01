@@ -38,14 +38,15 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 			<!-- Table Panel -->
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header">
+					<div class="card-header" style="text-align: center; font-size: 30px;">
 						<b>List of Outposts</b>
-						<span class="float:right"><a class="btn btn-primary btn-block btn-sm col-sm-2 float-right" href="javascript:void(0)" id="new_station">
-					<i class="fa fa-plus"></i> New Outpost
-				</a></span>
+				
 					
 					</div>
 					<div class="card-body">
+					<span class="float:right"><a class="btn btn-primary btn-block btn-sm col-sm-2 float-right" href="javascript:void(0)" id="new_station">
+					<i class="fa fa-plus"></i> Add New Outpost
+				</a></span>
 						<table class="table table-condensed table-bordered table-hover">
 							<thead>
 								<tr>
@@ -109,7 +110,7 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 		$('table').dataTable()
 	})
 	$('#new_station').click(function(){
-		uni_modal("New Station","manage_station.php","")
+		uni_modal("New Outpost","manage_station.php","")
 		
 	})
 

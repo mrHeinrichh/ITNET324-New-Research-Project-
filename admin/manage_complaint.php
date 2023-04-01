@@ -13,12 +13,34 @@
 ?>
 <div class="container-fluid">
 	<div class="col-lg-12">
-		<large><b>Report/Complaint:</b></large>
-		<p><?php echo $message ?></p>
+		<large><b>Report Description:</b></large>
+		<p><?php echo $reports ?></p>
 		<hr>
+
 		<large><b>Incident Address:</b></large>
 		<p><?php echo $address ?></p>
 		<hr>
+
+		<large><b>Street:</b></large>
+		<p><?php echo $street ?></p>
+		<hr>
+
+		<large><b>Message:</b></large>
+		<p><?php echo $message ?></p>
+		<hr>
+
+		<large><b>Image:</b></large>
+			<!-- image -->
+			<?php if(isset($image)): ?>
+						<img src="../admin/<?php echo $image ?>" alt="Image" class="img-thumbnail" 
+							style=" display: block;
+							margin-left: auto;
+							margin-right: auto;
+							width: 300px;
+							height: 250px;">
+					<?php endif; ?>
+		<hr>
+
 		<form id="manage-complaints">
 			<div id="msg"></div>
 			<input type="hidden" name="id" value="<?php echo $_GET['id'] ?>">
@@ -32,7 +54,7 @@
 			</div>
 			<div class="assign-responder" style="display:none">
 				<div class="form-group">
-					<label for="" class="control-label">Dispathced Responder</label>
+					<label for="" class="control-label">Dispatched Responder</label>
 					<select name="responder_id" id="" class="custom-select input-sm select2">
 						<option value=""></option>
 						<?php
@@ -79,7 +101,7 @@
 	})
 	$('#manage-complaints').submit(function(e){
 		e.preventDefault()
-		start_load()
+		// start_load()
 		if($(this).find('.alert-danger').length > 0 )
 			$(this).find('.alert-danger').remove();
 		$.ajax({
@@ -99,9 +121,10 @@
 							location.reload()
 						},1000)
 				}else if(resp == 2){
-					$('#msg').html('<div class="alert alert-danger">Report/Complaint is not received yet.</div>')
+					$('#msg').html('<div class="alert alert-danger"> is not received yet.</div>')
 					end_load()
 				}
+				location.reload();
 			}
 		})
 	})

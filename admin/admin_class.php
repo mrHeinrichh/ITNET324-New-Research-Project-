@@ -123,6 +123,7 @@ Class Action {
 		$data = " name = '$name' ";
 		$data .= ", email = '$email' ";
 		$data .= ", address = '$address' ";
+		$data .= ", street = '$street' ";
 		$data .= ", contact = '$contact' ";
 		$data .= ", password = '".md5($password)."' ";
 		$data .= ", image = '$image_path' ";
@@ -428,7 +429,7 @@ Class Action {
 					$save2 = $this->db->query("INSERT INTO complaints_action set $data");
 				}
 				if($save2){
-					$this->db->query("UPDATE responders_team set availability = 0 where id = $responder_id ");
+					$this->db->query("UPDATE responders_team set availability = 1 where id = $responder_id ");
 				}
 				if(isset($res)){
 					$this->db->query("UPDATE responders_team set availability = 1 where id = {$res['responder_id']} ");

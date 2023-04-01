@@ -14,17 +14,25 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 ?>
 <div class="container-fluid">
 	<div class="col-lg-12">
+	<div class="row mb-4 mt-4">
+			<div class="col-md-12">
+			
+			</div>
+		</div>
 		<div class="card">
-			<div class="card-header">
+			<div class="card-header" style="text-align: center; font-size: 30px;">
 				<b>List of Reports of Complaints</b>
 			</div>
 			<div class="card-body">
 				<table class="table table-bordered table-hover" id="complaint-tbl">
-			        <thead>
+			        <thead style="text-align: center; font-size: 15px;">
 			          <tr>
 			            <th width="15%">Date</th>
-			            <th width="20%">Report</th>
+						<th width="10%">Report Description</th>
 			            <th width="20%">Incident Address</th>
+						<th width="10%">Street</th>
+			            <th width="20%">Message</th>
+
 			            <th width="10%">Status</th>
 			      
 
@@ -40,8 +48,11 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 			          ?>
 			          <tr class="<?php echo $row['status'] == 1 ? 'border-alert' : '' ?>">
 			            <td><?php echo date('M d, Y h:i A',strtotime($row['date_created'])) ?></td>
-			            <td><?php echo $row['message'] ?></td>
+						<td><?php echo $row['reports'] ?></td>
 			            <td><?php echo $row['address'] ?></td>
+						<td><?php echo $row['street'] ?></td>
+						<td><?php echo $row['message'] ?></td>
+
 			            <td><?php echo $status[$row['status']] ?></td>
 	
 

@@ -89,7 +89,6 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1'){
 				<div class="form-group">
 					<label for="about" class="control-label">Announcements</label>
 					<textarea name="about" class="text-jqte" id="page_content"><?php echo isset($meta['about_content']) ? $meta['about_content'] : '' ?></textarea>
-
 				</div>
 				<div class="form-group">
 					<label for="" class="control-label">Image</label>

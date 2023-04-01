@@ -12,7 +12,7 @@ foreach($qry->fetch_array() as $k => $val){
 		<input type="hidden" name="id" value="<?php echo isset($id) ? $id : '' ?>">
 		<div id="msg" class="form-group"></div>
 		<div class="form-group">
-			<label for="" class="control-label">Station</label>
+			<label for="" class="control-label">Outpost</label>
 			<select name="station_id" id="" class="custom-select select2">
 				<option value=""></option>
 				<?php

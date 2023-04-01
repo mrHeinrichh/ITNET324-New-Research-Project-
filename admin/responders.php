@@ -38,13 +38,14 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 			<!-- Table Panel -->
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header">
+					<div class="card-header" style="text-align: center; font-size: 30px;">
 						<b>List of Responders</b>
-						<span class="float:right"><a class="btn btn-primary btn-block btn-sm col-sm-2 float-right" href="javascript:void(0)" id="new_responder">
-					<i class="fa fa-plus"></i> Add New Team
-				</a></span>
+				
 					</div>
 					<div class="card-body">
+					<span class="float:right"><a class="btn btn-primary btn-block btn-sm col-sm-2 float-right" href="javascript:void(0)" id="new_responder">
+					<i class="fa fa-plus"></i> Add New Responders
+				</a></span>
 						<table class="table table-condensed table-bordered table-hover">
 							<thead>
 								<tr>

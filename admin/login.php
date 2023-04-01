@@ -68,6 +68,9 @@ header("location:index.php?page=home");
   							<input type="password" id="password" name="password" class="form-control">
   						</div>
   						<center><button class="btn-sm btn-block btn-wave col-md-4 btn-primary">Login</button></center>
+						<br>
+						<center><a href="../index.php" button class="btn-sm btn-block btn-wave col-md-4 btn-primary">Back to website</button></center></a>
+
   					</form>
   				</div>
   			</div>
@@ -96,7 +99,10 @@ header("location:index.php?page=home");
 			},
 			success:function(resp){
 				if(resp == 1){
+					$('#login-form').prepend('<div class="alert alert-success">Login successful!</div>')
+
 					location.href ='index.php?page=home';
+
 				}else{
 					$('#login-form').prepend('<div class="alert alert-danger">Username or password is incorrect.</div>')
 					$('#login-form button[type="button"]').removeAttr('disabled').html('Login');

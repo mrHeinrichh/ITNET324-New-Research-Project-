@@ -16,7 +16,10 @@ foreach($user->fetch_array() as $k =>$v){
 
 		<input type="hidden" name="id" value="<?php echo isset($meta['id']) ? $meta['id']: '' ?>">
 		<?php if (isset($meta['image'])): ?>
-        <img src="<?php echo $meta['image']; ?>" alt="User Image" style="max-width: 100px;">
+        <img src="<?php echo $meta['image']; ?>" alt="User Image" 	style=" display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 60%;">
     <?php endif; ?>
 
 		<div class="form-group">
@@ -48,6 +51,10 @@ foreach($user->fetch_array() as $k =>$v){
 		<?php endif; ?>
 		<?php endif; ?>
 		
+		<div class="form-group">
+			<label for="" class="control-label">Image</label>
+			<input type="file" name="image" class="form-control">
+		</div>
 
 	</form>
 </div>

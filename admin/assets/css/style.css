@@ -1660,7 +1660,7 @@ main#view-panel{
     top: 3.5rem;
 }
 main#main {
-    /*margin-top: 8rem;*/
+    margin-top: 8rem;
 }
 main#main.login {
     margin-top: unset;

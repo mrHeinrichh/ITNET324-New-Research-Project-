@@ -1,4 +1,5 @@
 <?php session_start() ?>
+
 <div class="container-fluid">
 	<form action="" id="login-frm">
 		<div class="form-group">
@@ -41,7 +42,11 @@
 			},
 			success:function(resp){
 				if(resp == 1){
+					$('#login-form').prepend('<div class="alert alert-success">Login successful!</div>')
+
 					location.href ='<?php echo isset($_GET['redirect']) ? $_GET['redirect'] : 'index.php?page=home' ?>';
+					$('#login-form').prepend('<div class="alert alert-success">Login successful!</div>')
+
 				}else{
 					$('#login-frm').prepend('<div class="alert alert-danger">Email or password is incorrect.</div>')
 		end_load()
