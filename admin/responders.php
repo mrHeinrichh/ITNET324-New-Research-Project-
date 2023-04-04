@@ -43,7 +43,7 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 				
 					</div>
 					<div class="card-body">
-					<span class="float:right"><a class="btn btn-primary btn-block btn-sm col-sm-2 float-right" href="javascript:void(0)" id="new_responder">
+					<span class="float:right"><a class="btn btn-danger btn-block btn-sm col-sm-2 float-right" href="javascript:void(0)" id="new_responder">
 					<i class="fa fa-plus"></i> Add New Responders
 				</a></span>
 						<table class="table table-condensed table-bordered table-hover">
@@ -74,7 +74,7 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 										 <p><small><i><b><?php echo $row['address'] ?></i></small></p>
 									</td>
 									<td class="text-center">
-										<button class="btn btn-sm btn-outline-primary edit_responder" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
+										<button class="btn btn-sm btn-outline-danger edit_responder" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
 										<button class="btn btn-sm btn-outline-danger delete_responder" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
 									</td>
 								</tr>

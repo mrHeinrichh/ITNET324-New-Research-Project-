@@ -6,7 +6,7 @@ include 'admin/db_connect.php';
         cursor: pointer;
     }
        #cat-list li:hover {
-        color: white;
+        color: black;
         background: #007bff8f;
     }
     .prod-item p{
@@ -17,7 +17,7 @@ include 'admin/db_connect.php';
     right: .5em;
 }
     .fr-wrapper {
-        color:white;
+        color:black;
         background: #ffffff08;
         padding: 1em 1.5em;
         border-radius:5px;
@@ -32,7 +32,7 @@ include 'admin/db_connect.php';
       background-color: white;
     }
     div#complaint-tbl_wrapper *{
-      color: white;
+      color: black;
     }
     table.dataTable tbody tr:hover td {
       color: black !important;
@@ -41,7 +41,7 @@ include 'admin/db_connect.php';
       color: black !important;
     }
     .paginate_button{
-      color: white !important;
+      color: black !important;
     }
     div#complaint-tbl_filter input {
       color: black !important;

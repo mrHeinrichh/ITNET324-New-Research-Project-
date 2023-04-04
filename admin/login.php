@@ -50,14 +50,64 @@ header("location:index.php?page=home");
 
 <body class="bg-dark">
 
+<section class="vh-100" style="background-color: #1e272e;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img href="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/img1.jpg
+                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+			  <form id="login-form" >
+
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                 <img href="/assets/44782543_2249500905082387_1414103040016777216_n.jpg" alt="">
+				 <h4 class="text-black text-center"><b><?php echo $_SESSION['system']['name'] ?></b></h4>
+                  </div>
+
+                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" id="username"  name="username"  class="form-control form-control-lg" />
+                    <label class="form-label" for="form2Example17">Email address</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="password" id="password" name="password" class="form-control form-control-lg" />
+                    <label class="form-label" for="form2Example27">Password</label>
+                  </div>
+
+                  <div class="pt-1 mb-4">
+                    <button class="btn btn-dark btn-lg btn-block">Login</button>
+                  </div>
+
+                  <a href="../index.php/">Back to Home</a>
+     
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <main id="main" >
-  	
   		<div class="align-self-center w-100">
-		<h4 class="text-white text-center"><b><?php echo $_SESSION['system']['name'] ?></b></h4>
+	
   		<div id="login-center" class="bg-dark row justify-content-center">
   			<div class="card col-md-4">
   				<div class="card-body">
+
+				
   					<form id="login-form" >
   						<div class="form-group">
   							<label for="username" class="control-label">Username</label>
@@ -67,9 +117,9 @@ header("location:index.php?page=home");
   							<label for="password" class="control-label">Password</label>
   							<input type="password" id="password" name="password" class="form-control">
   						</div>
-  						<center><button class="btn-sm btn-block btn-wave col-md-4 btn-primary">Login</button></center>
+  						<center><button class="btn-sm btn-block btn-wave col-md-4 btn-danger">Login</button></center>
 						<br>
-						<center><a href="../index.php" button class="btn-sm btn-block btn-wave col-md-4 btn-primary">Back to website</button></center></a>
+						<center><a href="../index.php" button class="btn-sm btn-block btn-wave col-md-4 btn-danger">Back to website</button></center></a>
 
   					</form>
   				</div>

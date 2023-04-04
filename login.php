@@ -1,20 +1,36 @@
 <?php session_start() ?>
 
-<div class="container-fluid">
-	<form action="" id="login-frm">
-		<div class="form-group">
-			<label for="" class="control-label">Email</label>
-			<input type="email" name="email" required="" class="form-control">
-		</div>
-		<div class="form-group">
-			<label for="" class="control-label">Password</label>
-			<input type="password" name="password" required="" class="form-control">
-			<small><a href="javascript:void(0)" id="new_account">Don't have an account?</a></small>
-		</div>
-		<button class="button btn btn-primary btn-sm">Login</button>
-		<button class="button btn btn-secondary btn-sm" type="button" data-dismiss="modal">Cancel</button>
-	</form>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-25 col-md-10 col-sm-10">
+    
+       
+    
+          <form action="" id="login-frm">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" name="password" required>
+              <a href="#" class="float-end">Forgot password?</a>
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-lg btn-primary" type="submit">Log in</button>
+            </div>
+          </form>
+        
+      </div>
+      <div class="card mt-3">
+        <div class="card-body">
+          <p class="card-text text-center">Don't have an account yet? <a href="#" id="new_account">Sign up</a></p>
+        </div>
+      </div>
+    
+  </div>
 </div>
+
 
 <style>
 	#uni_modal .modal-footer{

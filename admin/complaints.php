@@ -60,7 +60,7 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 			  
 
 			            <td class="text-center">
-			            	<button class="btn btn-primary btn-sm m-0 view_btn" type="button" data-id="<?php echo $row['id'] ?>">View</button>
+			            	<button class="btn btn-danger btn-sm m-0 view_btn" type="button" data-id="<?php echo $row['id'] ?>">View</button>
 			            </td>
 			          </tr>
 			        <?php endwhile; ?>

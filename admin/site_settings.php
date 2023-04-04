@@ -98,7 +98,7 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1'){
 					<img src="<?php echo isset($meta['cover_img']) ? 'assets/uploads/'.$meta['cover_img'] :'' ?>" alt="" id="cimg">
 				</div>
 				<center>
-					<button class="btn btn-info btn-primary btn-block col-md-2">Save</button>
+					<button class="btn btn-info btn-danger btn-block col-md-2">Save</button>
 				</center>
 			</form>
 		</div>

@@ -74,7 +74,7 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 									<td class='text-center'>
 										
 										<?php if($row['status'] == 1): ?>
-											<span class="badge badge-primary">Verified</span>
+											<span class="badge badge-danger">Verified</span>
 										<?php else: ?>
 											<span class="badge badge-secondary">Unverified</span>
 										<?php endif; ?>
@@ -82,11 +82,11 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 									</td>
 									<td class="text-center">
 									<?php if($row['status'] == 1): ?>
-										<button class="btn btn-sm btn-outline-primary unverify_user" type="button" data-id="<?php echo $row['id'] ?>" >Unverify</button>
+										<button class="btn btn-sm btn-outline-danger unverify_user" type="button" data-id="<?php echo $row['id'] ?>" >Unverify</button>
 									<?php else: ?>
-										<button class="btn btn-sm btn-outline-primary verify_user" type="button" data-id="<?php echo $row['id'] ?>" >Verify</button>
+										<button class="btn btn-sm btn-outline-danger verify_user" type="button" data-id="<?php echo $row['id'] ?>" >Verify</button>
 									<?php endif; ?>
-										<button class="btn btn-sm btn-outline-primary view_complaints" type="button" data-id="<?php echo $row['id'] ?>"   data-name="<?php echo $row['name'] ?>">View Complaints</button>
+										<button class="btn btn-sm btn-outline-danger view_complaints" type="button" data-id="<?php echo $row['id'] ?>"   data-name="<?php echo $row['name'] ?>">View Complaints</button>
 									</td>
 								</tr>
 								<?php endwhile; ?>

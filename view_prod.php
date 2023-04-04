@@ -25,7 +25,7 @@ $category = $cat_qry->num_rows > 0 ? $cat_qry->fetch_array()['name'] : '' ;
 	<p>Description:</p>
 	<p class=""><small><i><?php echo $description ?></i></small></p>
 	<div class="col-md-12">
-		<button class="btn btn-primary btn-block btn-sm" type="button" id="bid">Bid</button>
+		<button class="btn btn-danger btn-block btn-sm" type="button" id="bid">Bid</button>
 	</div>
 	<div id="bid-frm">
 		<div class="col-md-12">
@@ -36,7 +36,7 @@ $category = $cat_qry->num_rows > 0 ? $cat_qry->fetch_array()['name'] : '' ;
 					<input type="number" class="form-control text-right" name="bid_amount" >
 				</div>
 				<div class="row justify-content-between">
-					<button class="btn col-sm-5 btn-primary btn-block btn-sm mr-2">Submit</button>
+					<button class="btn col-sm-5 btn-danger btn-block btn-sm mr-2">Submit</button>
 					<button class="btn col-sm-5 btn-secondary mt-0 btn-block btn-sm" type="button" id="cancel_bid">Cancel</button>
 				</div>
 			</form>

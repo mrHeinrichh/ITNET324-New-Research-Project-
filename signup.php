@@ -111,7 +111,7 @@ if(isset($_SESSION['login_id'])){
 			<label for="" class="control-label">Image</label>
 			<input type="file" name="image" class="form-control">
 		</div>
-		<button class="button btn btn-primary btn-sm">Create</button>
+		<button class="button btn btn-danger btn-sm">Create</button>
 		<button class="button btn btn-secondary btn-sm" type="button" data-dismiss="modal">Cancel</button>
 	</form>
 </div>
