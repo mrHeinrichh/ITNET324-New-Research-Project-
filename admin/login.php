@@ -57,8 +57,9 @@ header("location:index.php?page=home");
         <div class="card" style="border-radius: 1rem;">
           <div class="row g-0">
             <div class="col-md-6 col-lg-5 d-none d-md-block">
-              <img href="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/img1.jpg
-                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+			<img src="../assets/logo-main.png" alt="login form" class="img-fluid"
+     style="border-radius: 1rem 0 0 1rem; padding: 0 10px; margin-top: 90px; margin-left: 50px;">
+
             </div>
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
@@ -66,7 +67,7 @@ header("location:index.php?page=home");
 			  <form id="login-form" >
 
                   <div class="d-flex align-items-center mb-3 pb-1">
-                 <img href="/assets/44782543_2249500905082387_1414103040016777216_n.jpg" alt="">
+                 <img href="../assets/logo-main.png" alt="">
 				 <h4 class="text-black text-center"><b><?php echo $_SESSION['system']['name'] ?></b></h4>
                   </div>
 
@@ -86,7 +87,7 @@ header("location:index.php?page=home");
                     <button class="btn btn-dark btn-lg btn-block">Login</button>
                   </div>
 
-                  <a href="../index.php/">Back to Home</a>
+                  <a href="../index.php">Back to Home</a>
      
                 </form>
 

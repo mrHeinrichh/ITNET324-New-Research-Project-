@@ -76,10 +76,13 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
                 </table>
                 <hr>
                 <div class="col-md-12 mb-4">
-                    <center>
-                        <button class="btn btn-success btn-sm col-sm-3" type="button" id="print"><i class="fa fa-print"></i> Print</button>
-                    </center>
-                </div>
+    <center>
+        <button class="btn btn-success btn-sm col-sm-3" type="button" id="print" style="padding: 10px 20px; margin-top: 10px;">
+            <i class="fa fa-print"></i> Print
+        </button>
+    </center>
+</div>
+
             </div>
             </div>
         </div>

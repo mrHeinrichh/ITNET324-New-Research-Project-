@@ -44,9 +44,12 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 					
 					</div>
 					<div class="card-body">
-					<span class="float:right"><a class="btn btn-primary btn-block btn-sm col-sm-2 float-right" href="javascript:void(0)" id="new_station">
-					<i class="fa fa-plus"></i> Add New Outpost
-				</a></span>
+					<span class="float:right">
+    <a class="btn btn-danger btn-block btn-sm col-sm-2 float-right" href="javascript:void(0)" id="new_station" style="padding: 10px 20px; margin-top: 10px;">
+        <i class="fa fa-plus"></i> Add New Outpost
+    </a>
+</span>
+
 						<table class="table table-condensed table-bordered table-hover">
 							<thead>
 								<tr>

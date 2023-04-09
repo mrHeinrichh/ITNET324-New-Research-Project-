@@ -16,8 +16,11 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 	
 	<div class="row">
 	<div class="col-lg-12">
-			<button class="btn btn-danger float-right btn-sm" id="new_user"><i class="fa fa-plus"></i> New user</button>
-	</div>
+    <button class="btn btn-danger float-right btn-sm" id="new_user" style="padding: 10px 20px; margin-top: 10px;">
+        <i class="fa fa-user"></i> New User
+    </button>
+</div>
+
 	</div>
 	<br>
 	<div class="col-lg-12">
