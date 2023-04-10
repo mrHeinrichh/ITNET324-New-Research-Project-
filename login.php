@@ -14,17 +14,17 @@
             <div class="mb-3">
               <label for="password" class="form-label">Password</label>
               <input type="password" class="form-control" id="password" name="password" required>
-              <a href="#" class="float-end">Forgot password?</a>
+              <!-- <a href="#" class="float-end">Forgot password?</a> -->
             </div>
             <div class="d-grid gap-2">
               <button class="btn btn-lg btn-primary" type="submit">Log in</button>
+			  <button class="btn btn-lg btn-secondary" type="button" data-dismiss="modal">Cancel</button>
             </div>
           </form>
-        
       </div>
       <div class="card mt-3">
         <div class="card-body">
-          <p class="card-text text-center">Don't have an account yet? <a href="#" id="new_account">Sign up</a></p>
+          <p  href="#" id="new_account"class="card-text text-center">Don't have an account yet? <a href="#" id="new_account">Sign up</a></p>
         </div>
       </div>
     
@@ -58,7 +58,7 @@
 			},
 			success:function(resp){
 				if(resp == 1){
-					$('#login-form').prepend('<div class="alert alert-success">Login successful!</div>')
+					$('#login-form').prepend('<div class="alert alert-success">Login successfully!</div>')
 
 					location.href ='<?php echo isset($_GET['redirect']) ? $_GET['redirect'] : 'index.php?page=home' ?>';
 					$('#login-form').prepend('<div class="alert alert-success">Login successful!</div>')

@@ -54,12 +54,11 @@
                 <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home">Home</a></li> -->
                 <?php if(isset($_SESSION['login_id'])): ?>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=complaint_list">My Complaint List</a></li>
-                <?php echo "".$_SESSION['login_name'] ?>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="report_crime" href="javascript:void(0)">Report Incident</a></li>
                 <div class=" dropdown mr-4">
                     <a href="#" class="text-white dropdown-toggle"  id="account_settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['login_name'] ?> </a>
                       <div class="dropdown-menu" aria-labelledby="account_settings" style="left: -2.5em;">
                         <a class="dropdown-item" href="javascript:void(0)" id="manage_my_account"><i class="fa fa-cog"></i> Manage Account</a>
-                        
                         <a class="dropdown-item" href="admin/ajax.php?action=logout2"><i class="fa fa-power-off"></i> Logout</a>
                       </div>
                 </div>
