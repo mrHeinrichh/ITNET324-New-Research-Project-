@@ -16,9 +16,11 @@ foreach($user->fetch_array() as $k =>$v){
 
 		<input type="hidden" name="id" value="<?php echo isset($meta['id']) ? $meta['id']: '' ?>">
 		<?php if (isset($meta['image'])): ?>
-        <img src="<?php echo $meta['image']; ?>" alt="User Image" 	style=" display: block;
+        <img src="<?php echo $meta['image']; ?>" alt="User Image" 	
+			style=" display: block;
 				margin-left: auto;
 				margin-right: auto;
+				border-radius: 50%;
 				width: 60%;">
     <?php endif; ?>
 
@@ -32,7 +34,7 @@ foreach($user->fetch_array() as $k =>$v){
 		</div>
 		<div class="form-group">
 			<label for="password">Password</label>
-			<input type="password" name="password" id="password" class="form-control" value="" autocomplete="off">
+			<input type="password" name="password" id="password" class="form-control" value="" required autocomplete="off">
 			<?php if(isset($meta['id'])): ?>
 			<small><i>Leave this blank if you dont want to change the password.</i></small>
 		<?php endif; ?>

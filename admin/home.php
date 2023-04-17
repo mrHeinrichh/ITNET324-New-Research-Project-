@@ -113,18 +113,6 @@ $result_num_outposts = mysqli_query($conn, $sql_outposts);
 $row_outposts = mysqli_fetch_assoc($result_num_outposts);
 $num_num_outposts= $row_outposts['num_outposts'];
 
-
-
-
-
-
-
-
-
-
-
-
-
 // Query to count the number of complaints
 $sql_complaints = "SELECT COUNT(*) AS num_complaints FROM complaints ";
 $result_complaints = mysqli_query($conn, $sql_complaints);
@@ -157,40 +145,19 @@ $result_complaints_done = mysqli_query($conn, $sql_complaints);
 $row_complaints = mysqli_fetch_assoc($result_complaints_done);
 $num_complaints_done = $row_complaints['num_complaints_done'];
 
-
-
-
-
 // Close the database connection
 mysqli_close($conn);
 ?>
-
-
 
 
 <div class="containe-fluid">
 	<div class="row mt-3 ml-3 mr-3">
         <div class="col-lg-12">
             <div class="card">
-                
                 <div class="card-body">
-
-                
                    <p style="font-size:30px; font-family: impact; "> <?php echo "Welcome back, ". $_SESSION['login_name']."!"  ?></p>
                     <hr>
        
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -208,8 +175,6 @@ mysqli_close($conn);
 			justify-content: center;
 			align-items: center;
 			margin-top: 20px;
-
-            
 		}
 		.card {
 			background-color: #f8f8f8;
@@ -235,7 +200,6 @@ mysqli_close($conn);
             
 		}
       
-       
 		.card h2 {
 			margin-top: 0;
 			margin-bottom: 10px;
@@ -262,6 +226,9 @@ mysqli_close($conn);
 			font-size: 30px;
 			color: #888;
 		}
+		
+
+
 	</style>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">

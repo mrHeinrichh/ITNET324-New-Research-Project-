@@ -9,15 +9,18 @@
 }
 </style>
 
-<nav class="navbar navbar-light fixed-top bg-danger" style="padding:0px">
+<nav class="navbar navbar-light fixed-top bg-dark" style="padding:0px; font-size: 15px;" >
   <div class="container-fluid mt-2 mb-2">
   	<div class="col-lg-12">
   		<div class="col-md-1 float-left" style="display: flex;">
   		
   		</div>
-      <div class="col-md-4 float-left text-white">
+      <div class="col-md-4 float-left text-white" > 
+      <!-- <img src="../assets/logo-main.png" alt="Image icon" /> -->
+
         <large><b><?php echo isset($_SESSION['system']['name']) ? $_SESSION['system']['name'] : '' ?></b></large>
       </div>
+      
 	  	<div class="float-right">
         <div class=" dropdown mr-4">
             <a href="#" class="text-white dropdown-toggle"  id="account_settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['login_name'] ?> </a>

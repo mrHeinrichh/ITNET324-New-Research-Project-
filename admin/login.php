@@ -50,7 +50,8 @@ header("location:index.php?page=home");
 
 <body class="bg-dark">
 
-<section class="vh-100" style="background-color: #1e272e;">
+<section class="vh-100" style="background: linear-gradient(to right, rgba(255, 0, 0, 0.3), rgba(0, 0, 255, 0.3));
+">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
@@ -61,12 +62,12 @@ header("location:index.php?page=home");
      style="border-radius: 1rem 0 0 1rem; padding: 0 10px; margin-top: 90px; margin-left: 50px;">
 
             </div>
-            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+            <div class="col-md-6 col-lg-7 d-flex align-items-center" >
               <div class="card-body p-4 p-lg-5 text-black">
 
-			  <form id="login-form" >
+			  <form id="login-form">
 
-                  <div class="d-flex align-items-center mb-3 pb-1">
+                  <div class="d-flex align-items-center mb-3 pb-1" >
                  <img href="../assets/logo-main.png" alt="">
 				 <h4 class="text-black text-center"><b><?php echo $_SESSION['system']['name'] ?></b></h4>
                   </div>

@@ -15,17 +15,40 @@
     ?>
     <style>
       .bg-dark {
-          background-color: #ffff !important;
+        background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5));
+
       }
+    
       #main-field{
         margin-top: 5rem!important;
       }
       body * {
         /* font-size: 30px ; */
+        /* background-color: #FFFFFF; */
+
       }
       .modal-body  {
         color:black;
-      }
+        background: #FFFFFF;
+        background: rgb(181,189,200); /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: linear-gradient(to bottom right, #ffffff, #0000000);
+    -webkit-box-shadow:  0px 0px 5px 5px rgba(0, 0, 0, .8);
+    -moz-box-shadow:  0px 0px 5px 5px rgba(0, 0, 0, .8);
+    box-shadow:  0px 0px 5px 5px rgba(0, 0, 0, .8);
+    }
+
+.modal-header{
+  color:black;
+        background: #FFFFFF;
+        background: rgb(181,189,200); /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: linear-gradient(to bottom right, #ffffff, #0000000);
+    -webkit-box-shadow:  0px 0px 5px 5px rgba(0, 0, 0, .8);
+    -moz-box-shadow:  0px 0px 5px 5px rgba(0, 0, 0, .8);
+    box-shadow:  0px 0px 5px 5px rgba(0, 0, 0, .8);
+    }
+
       .fr-wrapper {
           color:black;
           background: #FFFFFF;
@@ -35,9 +58,10 @@
 
       .masthead{
         background: url('admin/assets/uploads/<?php echo $_SESSION['system']['cover_img'] ?>') !important;
-       
         background-size: cover !important;
       }
+
+
     </style>
     <body id="page-top" class="bg-dark">
         <!-- Navigation-->
@@ -45,7 +69,7 @@
         <div class="toast-body text-white">
         </div>
       </div>
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="padding: 20px;">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-dark" id="mainNav" style="padding: 20px;">
     <div class="container" style="padding: 0 50px;">
         <a class="navbar-brand js-scroll-trigger" href="./"><?php echo $_SESSION['system']['name'] ?></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -54,12 +78,15 @@
                 <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home">Home</a></li> -->
                 <?php if(isset($_SESSION['login_id'])): ?>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=complaint_list">My Complaint List</a></li>
-                <?php echo "".$_SESSION['login_name'] ?>
+               
+
+
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="report_crime" href="javascript:void(0)">Report Incident</a></li>
                 <div class=" dropdown mr-4">
-                    <a href="#" class="text-white dropdown-toggle"  id="account_settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['login_name'] ?> </a>
+                    <a href="#" class="text-white dropdown-toggle"  id="account_settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <?php  echo $_SESSION['login_name'] ?> </a>
                       <div class="dropdown-menu" aria-labelledby="account_settings" style="left: -2.5em;">
                         <a class="dropdown-item" href="javascript:void(0)" id="manage_my_account"><i class="fa fa-cog"></i> Manage Account</a>
-                        
                         <a class="dropdown-item" href="admin/ajax.php?action=logout2"><i class="fa fa-power-off"></i> Logout</a>
                       </div>
                 </div>
@@ -70,8 +97,8 @@
                         Login
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="javascript:void(0)" id="login_now">Resident Login</a>
-                        <a class="dropdown-item" href="admin/login.php">Admin Login</a>
+                        <a class="dropdown-item" href="javascript:void(0)" id="login_now" style="font-family: Sans-Serif"><b>Resident Login</b></a>
+                        <a class="dropdown-item" href="admin/login.php" style="font-family: Sans-Serif"><b>Admin Login</b></a> 
                     </div>
                 </li>
               <?php endif; ?>
@@ -84,12 +111,7 @@
   <header class="masthead">
       <div class="container-fluid h-100">
           <div class="row h-100 align-items-center justify-content-center text-center">
-              <div class="col-lg-8 align-self-end mb-4 page-title">
-            
-           
-       
-              
-              
+              <div class="col-lg-8 align-self-end mb-4 page-title">  
           </div>
       </div>
   </header>
@@ -159,9 +181,6 @@
     </div>
   </div>
 
-
-
-
   <div id="preloader"></div>
         <footer class=" py-5 bg-dark">
             <div class="container">
@@ -206,10 +225,10 @@
       })
       $('#report_crime').click(function(){
         if('<?php echo !isset($_SESSION['login_id']) ? 1 : 0 ?>'==1){
-          uni_modal("Login",'login.php');
+          uni_modal("",'login.php');
           return false;
         }
-          uni_modal("Report",'manage_report.php');
+          uni_modal("Report Incident",'manage_report.php');
       })
       $('#manage_my_account').click(function(){
           uni_modal("Manage Account",'signup.php');

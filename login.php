@@ -1,35 +1,41 @@
 <?php session_start() ?>
 
+
 <div class="container">
   <div class="row justify-content-center">
+
+  <img src="./assets/logo-main.png" alt="login form" class="img-fluid"
+     style="border-radius: 1rem 0 0 1rem; padding: 0 10px; height: 250px;">
+
+
     <div class="col-lg-25 col-md-10 col-sm-10">
-    
-       
-    
+
           <form action="" id="login-frm">
             <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
+              <label for="email" class="form-label"> <strong>Email address<strong></label>
               <input type="email" class="form-control" id="email" name="email" required>
             </div>
             <div class="mb-3">
               <label for="password" class="form-label">Password</label>
               <input type="password" class="form-control" id="password" name="password" required>
-              <a href="#" class="float-end">Forgot password?</a>
+              <!-- <a href="#" class="float-end">Forgot password?</a> -->
             </div>
             <div class="d-grid gap-2">
               <button class="btn btn-lg btn-primary" type="submit">Log in</button>
+			  <button class="btn btn-lg btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+
             </div>
           </form>
         
       </div>
-      <div class="card mt-3">
-        <div class="card-body">
+      <!-- <div class="card mt-3"> -->
+        <!-- <div class="card-body"> -->
           <p class="card-text text-center">Don't have an account yet? <a href="#" id="new_account">Sign up</a></p>
-        </div>
-      </div>
-    
+        <!-- </div> -->
+      <!-- </div> -->
   </div>
 </div>
+
 
 
 <style>

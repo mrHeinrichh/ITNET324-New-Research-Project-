@@ -74,7 +74,7 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 										 <p><small><i><b><?php echo $row['address'] ?></i></small></p>
 									</td>
 									<td class="text-center">
-										<button class="btn btn-sm btn-outline-danger edit_responder" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
+										<button class="btn btn-sm btn-outline-primary edit_responder" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
 										<button class="btn btn-sm btn-outline-danger delete_responder" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
 									</td>
 								</tr>

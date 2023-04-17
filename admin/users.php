@@ -15,18 +15,17 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 <div class="container-fluid">
 	
 	<div class="row">
-	<div class="col-lg-12">
-    <button class="btn btn-danger float-right btn-sm" id="new_user" style="padding: 10px 20px; margin-top: 10px;">
-        <i class="fa fa-user"></i> New User
-    </button>
-</div>
 
 	</div>
 	<br>
 	<div class="col-lg-12">
 		<div class="card ">
-			<div class="card-header"><b>User List</b></div>
+		<div class="card-header" style="text-align: center; font-size: 30px;">
+			<b>List of Users</b>
+		</div>			
 			<div class="card-body">
+			<a class="btn btn-danger btn-block btn-sm col-sm-2 float-right" href="javascript:void(0)" id="new_user" style="padding: 10px 20px; margin-top: 10px;">
+        <i class="fa fa-plus"></i> Add New User</a>
 				<table class="table-striped table-bordered">
 			<thead>
 				<tr>

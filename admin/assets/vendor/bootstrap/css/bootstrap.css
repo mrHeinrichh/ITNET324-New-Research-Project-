@@ -577,6 +577,8 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  /* background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)); */
+
 }
 
 @media (min-width: 576px) {
@@ -3402,6 +3404,7 @@ input[type="button"].btn-block {
 }
 
 .dropdown-item {
+
   display: block;
   width: 100%;
   padding: 0.25rem 1.5rem;

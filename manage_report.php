@@ -32,19 +32,15 @@ if(isset($_POST['save_as_image'])) {
         <option value="Improper waste disposal">Improper waste disposal</option>
         <option value="Clogged drainage systems">Clogged drainage systems</option>
         <option value="Stagnant water">Stagnant water</option>
-
         <option value="Poor sanitation practices">Poor sanitation practices</option>
         <option value="Overgrown grass and bushes">Overgrown grass and bushes</option>
         <option value="Lack of proper waste segregation">Lack of proper waste segregation</option>
-
         <option value="Inadequate cleaning of public facilities">Inadequate cleaning of public facilities</option>
         <option value="Air pollution">Air pollution</option>
         <option value="Unregulated food vending">Unregulated food vending</option>
-
         <option value="Insufficient clean water and sewage management">Insufficient clean water and sewage management</option>
         <option value="Improper disposal of hazardous materials">Improper disposal of hazardous materials</option>
         <option value="Accumulation of plastic waste">Accumulation of plastic waste</option>
-        <option value="Others">Others(TYPE THE INCIDENT IN THE REMARKS BOX)</option>
 
         <!-- Add more options as needed -->
     </select>

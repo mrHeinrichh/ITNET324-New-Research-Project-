@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2023 at 04:59 PM
+-- Generation Time: Apr 10, 2023 at 07:35 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -67,8 +67,6 @@ INSERT INTO `complainants` (`id`, `name`, `address`, `street`, `contact`, `statu
 (21, 'madrid', '231sdfq', 'Luzon', '2131', 1, 'madrid@gmail.com', '4297f44b13955235245b2497399d7a93', ''),
 (22, 'kimmy', '15235243', '', '12312321', 1, 'kimmy@gmail.com', 'b23cf2d0fb74b0ffa0cf4c70e6e04926', ''),
 (23, 'Jaci Ardales', '4141', '', '12323', 0, '5123@gmail.com', 'e277dd1e05688a22e377e25a3dae5de1', ''),
-(24, 'tanginamo', 'tanginamo123123', '', '1234123', 1, 'tanginamo@gmail.com', '7ff2574e6df5fd0e5970fe3474e72aec', ''),
-(25, 'gagoka', 'gagoka', '', 'gagoka', 0, 'gagoka@gmail.com', 'd72b2b7e38f2eedee0e1f83e41fe4c0c', ''),
 (26, 'lastnato', 'lastnato', '', 'lastnato', 0, 'lastnato@mgial.com', '8c7c9b717b3fc17ac8d3909f5856eda3', ''),
 (27, 'kisses', 'kisses', '', 'kisses', 0, 'kisses@gmail.coim', '9e8b4e6aa25e60e1c9ef7fa02dc71a79', ''),
 (28, 'aj', 'ajajaja', '', '1231241235234', 1, 'ajaja@gmail.com', 'f7938fdfb2a02d400416050e66441a32', './admin/assets/uploads/1678721970.jpg'),
@@ -81,7 +79,12 @@ INSERT INTO `complainants` (`id`, `name`, `address`, `street`, `contact`, `statu
 (35, 'Lon Masilang', '123123', '', '123123', 0, 'longadog@123.com', '4297f44b13955235245b2497399d7a93', 'assets/uploads/1678723347.jpg'),
 (36, 'Customer', '09 Customer 09 Cust', 'A. Bonifacio', '09090909', 0, 'customer@gmail.com', 'd41d8cd98f00b204e9800998ecf8427e', 'assets/uploads/1679894309.png'),
 (37, 'kostomer', 'kostomer', 'Friendship Street', '010100101', 1, 'kostomer@gmail.com', '6dd12a2d12231a6eb7c1b9b8f43a16cf', 'assets/uploads/1679896258.png'),
-(38, 'eqweqwe', '123412zfzx', 'General Licuanan Street', '23123123', 0, 'mamamo@gmail.com', '5f4dcc3b5aa765d61d8327deb882cf99', 'assets/uploads/1679899957.png');
+(38, 'Anthony Charlessss', '123412zfzx', 'A. Bonifacio', '231231232', 0, 'mamamo@gmail.com', 'd41d8cd98f00b204e9800998ecf8427e', 'assets/uploads/1681123009.jpeg'),
+(39, 'Anthony Charles', '18A Lot 13 Block 21', 'A. Bonifacio', '0948738223', 0, 'residentsample@gmail.com', 'd41d8cd98f00b204e9800998ecf8427e', ''),
+(40, 'Norminio Mojica', '126 Progress Avenue, Carmelray Industrial Park 1, Carmeltown', 'A. Bonifacio', '3022144', 0, 'sample@gmail.com', 'd41d8cd98f00b204e9800998ecf8427e', 'assets/uploads/1681123733.png'),
+(41, 'Ali Mendoza', 'Circle', 'A. Bonifacio', '3009999', 0, 'rest@gmail.com', 'd41d8cd98f00b204e9800998ecf8427e', 'assets/uploads/1681123946.png'),
+(42, 'Anthony Charles Madrid', '18 A Lot 13 Blk21', 'A. Bonifacio', '09090909', 0, 'madskie@gmail.com', '5f4dcc3b5aa765d61d8327deb882cf99', 'assets/uploads/1681124902.png'),
+(43, 'Charles Anthony', '#18 A Lot 13 Block 21 Purok-6', 'A. Bonifacio', '09479889358', 1, 'anthonymadrid@yahoo.com', '482c811da5d5b4bc6d497ffa98491e38', 'assets/uploads/1681128685.jpg');
 
 -- --------------------------------------------------------
 
@@ -106,14 +109,13 @@ CREATE TABLE `complaints` (
 --
 
 INSERT INTO `complaints` (`id`, `complainant_id`, `message`, `address`, `date_created`, `status`, `image`, `street`, `reports`) VALUES
-(1, 1, 'Sample Report', 'Sample Address', '2020-10-30 13:48:19', 3, NULL, 'Luzon', 'Air pollution'),
-(2, 1, 'aghasdhg', 'ahsgdahsdg', '2020-10-30 14:11:24', 3, NULL, 'Visayas', 'Drainage and Canal'),
 (3, 2, 'Clogged drainage spotted in magsaysay street.', 'Magsaysay Street, South Signal Village, Taguig City.', '2023-02-19 03:22:08', 2, NULL, 'Mindanao', 'Drainage and Canal'),
-(14, 36, 'adasdasdas', 'asdasdasdasd', '2023-03-27 13:13:45', 3, 'uploads/8afbc17125b5e69a34ca05b7ebde5cfc.png', 'A. Bonifacio', 'Improper waste disposal'),
 (15, 36, 'asdasdasdzxczxc', 'xzczxczxc', '2023-03-27 13:14:18', 2, 'uploads/aa54af5926467570643496cb238896bd.png', 'A. Bonifacio', 'Improper waste disposal'),
 (16, 37, 'lolololo', 'lolololo', '2023-03-27 13:51:56', 2, 'uploads/eada1e1375ec6030fa7ea42bfaac9b9c.png', 'General Espino Street', 'Air pollution'),
 (17, 38, 'MARUMI NA KANAL', '20 polakasa', '2023-03-27 16:17:13', 3, 'uploads/5495ed266d59ad99de6c8a47f613e933.png', 'Mayor Tanyag', 'Clogged drainage systems'),
-(18, 38, 'asdasdxzczxc', 'asdasdas', '2023-03-27 16:18:01', 1, 'uploads/621c69a68d362028c1b132543b79fdad.png', 'General Espino Street', 'Poor sanitation practices');
+(18, 38, 'asdasdxzczxc', 'asdasdas', '2023-03-27 16:18:01', 1, 'uploads/621c69a68d362028c1b132543b79fdad.png', 'General Espino Street', 'Poor sanitation practices'),
+(19, 43, 'It has been 3 days upon the report.', 'Corner Luzon Street and Caliao Street', '2023-04-10 20:15:21', 3, 'uploads/bddb3ecf9d939cde1349df26d77f5953.jpg', 'Luzon', 'Clogged drainage systems'),
+(20, 43, 'The grass hinders my vicinity', '18 A Lot 13 Purok 6', '2023-04-10 20:22:08', 3, 'uploads/e7d18532f3beb2aff1cb28128df81c9b.jpg', 'PNP Road', 'Overgrown grass and bushes');
 
 -- --------------------------------------------------------
 
@@ -136,13 +138,11 @@ CREATE TABLE `complaints_action` (
 --
 
 INSERT INTO `complaints_action` (`id`, `complaint_id`, `responder_id`, `dispatched_by`, `status`, `remarks`, `date_created`) VALUES
-(3, 1, 1, 1, 1, 'samplelangto', '2020-10-30 16:59:00'),
-(6, 2, 1, 1, 1, '212121212121', '2023-02-19 05:57:15'),
-(19, 14, 7, 1, 1, 'OKAY NA PO!', '2023-03-27 13:15:32'),
 (20, 3, 7, 1, 0, '', '2023-03-27 13:42:08'),
 (21, 16, 5, 1, 0, '', '2023-03-27 13:52:18'),
 (22, 15, 1, 1, 0, '', '2023-03-27 14:06:55'),
-(23, 17, 2, 1, 1, 'naresolbahan na po!', '2023-03-27 16:19:25');
+(23, 17, 2, 1, 1, 'naresolbahan na po!', '2023-03-27 16:19:25'),
+(24, 19, 2, 1, 1, 'YOUR REPORT HAD BEEN TAKEN ACTION AND IS NOW CLEANED.', '2023-04-10 20:18:21');
 
 -- --------------------------------------------------------
 
@@ -189,7 +189,8 @@ INSERT INTO `responders_team` (`id`, `station_id`, `name`, `availability`) VALUE
 (4, 1, 'Public Restroom Team', 1),
 (5, 4, 'Graffiti Removal Team', 1),
 (6, 2, 'Tree and Vegetation Team', 1),
-(7, 2, 'Sanitation Team', 1);
+(7, 2, 'Sanitation Team', 1),
+(9, 2, 'Road Cleaning Team', 1);
 
 -- --------------------------------------------------------
 
@@ -210,9 +211,10 @@ CREATE TABLE `stations` (
 --
 
 INSERT INTO `stations` (`id`, `name`, `address`, `date_created`, `contact`) VALUES
-(1, 'Outpost 1', 'Outpost 1 Address', '2020-10-30 10:56:25', 479889358),
-(2, 'Outpost 2', 'Outpost 2 Address', '2020-10-30 10:56:43', 633225444),
-(4, 'Outpost 3', 'Outpost 3 Address', '2023-03-06 12:45:00', 123123223);
+(1, 'Outpost 1', 'Magsaysay Cor. Ballecer Street', '2020-10-30 10:56:25', 479889358),
+(2, 'Outpost 2', 'Garcia Cor. Camia Street', '2020-10-30 10:56:43', 633225444),
+(4, 'Outpost 3', 'Luzon Cor. Caliao Street', '2023-03-06 12:45:00', 123123223),
+(5, 'Outpost 4', 'Caliao Street Cor. Visayas', '2023-04-10 20:31:30', 942322234);
 
 -- --------------------------------------------------------
 
@@ -234,7 +236,7 @@ CREATE TABLE `system_settings` (
 --
 
 INSERT INTO `system_settings` (`id`, `name`, `email`, `contact`, `cover_img`, `about_content`) VALUES
-(1, 'Barangay South Signal Village Reporting and Information System', 'brgysouthsignal@taguig.com', '+639479889358', '1676754540_2.jpg', '&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;span style=&quot;font-size: 30px; font-family: Tahoma, Geneva, sans-serif;&quot;&gt;&lt;strong&gt;Public Announcements&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&amp;nbsp;Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;img src=&quot;http://localhost/crms/admin/assets/uploads/1604029260_p1.jpg&quot; style=&quot;width: 558px;&quot; class=&quot;fr-fic fr-dib&quot;&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&amp;nbsp;Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;div class=&quot;fr-img-space-wrap&quot; style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;http://localhost/crms/admin/assets/uploads/1604029320_police cars.jpg&quot; style=&quot;width: 567px;&quot; class=&quot;fr-fic fr-rounded fr-dib&quot;&gt;&lt;p class=&quot;fr-img-space-wrap2&quot;&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;img src=&quot;http://localhost/ITNET324-New-Research-Project--main/admin/assets/uploads/1679905620_Screenshot 2023-03-04 123205.png&quot; style=&quot;width: 456px;&quot; class=&quot;fr-fic fr-dib&quot;&gt;');
+(1, 'Barangay South Signal Village Reporting System', 'brgysouthsignal@taguig.com', '+639479889358', '1681123080_Pink Minimalist Watercolor Welcome Spring Facebook Cover (1).png', '&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;img src=&quot;http://localhost/ITNET324-New-Research-Project-/admin/assets/uploads/1681124580_1681124597566.png&quot; style=&quot;width: 702px;&quot; class=&quot;fr-fic fr-dib&quot;&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;span class=&quot;fr-video fr-deletable fr-fvc fr-dvb fr-draggable&quot; contenteditable=&quot;false&quot; draggable=&quot;true&quot;&gt;&lt;iframe src=&quot;https://www.youtube.com/embed/2zUOCqovlL0?&amp;t=2s&amp;wmode=opaque&amp;rel=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; class=&quot;fr-draggable&quot; style=&quot;width: 715px; height: 419px;&quot;&gt;&lt;/iframe&gt;&lt;/span&gt;&lt;img src=&quot;http://localhost/ITNET324-New-Research-Project-/admin/assets/uploads/1681124640_1681124678473.png&quot; style=&quot;width: 672px;&quot; class=&quot;fr-fic fr-dib&quot;&gt;&lt;img data-fr-image-pasted=&quot;true&quot; src=&quot;http://localhost/ITNET324-New-Research-Project-/admin/assets/uploads/1681124700_1681124731748.png&quot; style=&quot;box-sizing: border-box; border-style: none; max-width: 100%; cursor: pointer; padding: 0px 1px; color: rgb(65, 65, 65); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; width: 674px;&quot; class=&quot;fr-fic fr-dib&quot;&gt;&lt;img data-fr-image-pasted=&quot;true&quot; src=&quot;http://localhost/ITNET324-New-Research-Project-/admin/assets/uploads/1681124760_1681124767116.png&quot; style=&quot;box-sizing: border-box; border-style: none; max-width: 100%; cursor: pointer; padding: 0px 1px; color: rgb(65, 65, 65); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; width: 702px;&quot; class=&quot;fr-fic fr-dib&quot;&gt;&amp;nbsp;&lt;/p&gt;&lt;div class=&quot;fr-img-space-wrap&quot; style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/div&gt;');
 
 -- --------------------------------------------------------
 
@@ -259,8 +261,9 @@ INSERT INTO `users` (`id`, `name`, `username`, `password`, `type`, `image`) VALU
 (1, 'Heinrich Fabros', 'adminskie', '0192023a7bbd73250516f069df18b500', 1, 'uploads/7c0bc99c4e879977901789b2b0ba3696.jpg'),
 (3, 'niggaturtle', 'niggaturtle', '1a1233cfb69d7f27211e36aff9ec373a', 1, 'uploads/43bae6d0a9816f0f9b8b30e518e7e06e.jpg'),
 (4, 'nationalid', 'nationalid', '1b2de2499e5f93e00a5a90e79a9da4b1', 1, 'uploads/e31e21362a22bec5a803fcfee6881247.jpg'),
-(5, 'Cyleen', 'cyleen', '5f4dcc3b5aa765d61d8327deb882cf99', 2, NULL),
-(6, 'mads', 'mads', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 'uploads/1fdffc4f0157c0e0ebc200922b7b3604.png');
+(5, 'Cyleensss', 'cyleen', '5f4dcc3b5aa765d61d8327deb882cf99', 2, 'uploads/31dbdf6dbd6f1daffb731f7f46e41bff.png'),
+(6, 'mads', 'mads', '5f4dcc3b5aa765d61d8327deb882cf99', 1, 'uploads/1fdffc4f0157c0e0ebc200922b7b3604.png'),
+(7, 'Jerico', 'jerico', '5f4dcc3b5aa765d61d8327deb882cf99', 2, 'uploads/1e0660a37a612b5cfbcc37affec789f5.png');
 
 --
 -- Indexes for dumped tables
@@ -276,14 +279,17 @@ ALTER TABLE `complainants`
 -- Indexes for table `complaints`
 --
 ALTER TABLE `complaints`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `foreign_key_complainant` (`complainant_id`);
 
 --
 -- Indexes for table `complaints_action`
 --
 ALTER TABLE `complaints_action`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `foreign_key_complaint` (`complaint_id`);
+  ADD KEY `foreign_key_complaint` (`complaint_id`),
+  ADD KEY `foreign_key_dispatched` (`dispatched_by`),
+  ADD KEY `foreign_key_responders` (`responder_id`);
 
 --
 -- Indexes for table `outposts`
@@ -295,7 +301,8 @@ ALTER TABLE `outposts`
 -- Indexes for table `responders_team`
 --
 ALTER TABLE `responders_team`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `foreign_key_stations` (`station_id`);
 
 --
 -- Indexes for table `stations`
@@ -323,19 +330,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `complainants`
 --
 ALTER TABLE `complainants`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `complaints`
 --
 ALTER TABLE `complaints`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `complaints_action`
 --
 ALTER TABLE `complaints_action`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `outposts`
@@ -347,13 +354,13 @@ ALTER TABLE `outposts`
 -- AUTO_INCREMENT for table `responders_team`
 --
 ALTER TABLE `responders_team`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `stations`
 --
 ALTER TABLE `stations`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `system_settings`
@@ -365,17 +372,31 @@ ALTER TABLE `system_settings`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
 --
 
 --
+-- Constraints for table `complaints`
+--
+ALTER TABLE `complaints`
+  ADD CONSTRAINT `foreign_key_complainant` FOREIGN KEY (`complainant_id`) REFERENCES `complainants` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `complaints_action`
 --
 ALTER TABLE `complaints_action`
-  ADD CONSTRAINT `foreign_key_complaint` FOREIGN KEY (`complaint_id`) REFERENCES `complaints` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `foreign_key_complaints` FOREIGN KEY (`complaint_id`) REFERENCES `complaints` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `foreign_key_dispatched` FOREIGN KEY (`dispatched_by`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `foreign_key_responders` FOREIGN KEY (`responder_id`) REFERENCES `responders_team` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `responders_team`
+--
+ALTER TABLE `responders_team`
+  ADD CONSTRAINT `foreign_key_stations` FOREIGN KEY (`station_id`) REFERENCES `stations` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
