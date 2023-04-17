@@ -13,7 +13,10 @@ if(isset($_SESSION['login_id'])){
 
 
 <div class="container-fluid">
+<div class="row justify-content-center">
+
 	<form action="" id="signup-frm" enctype="multipart/form-data">
+		
 		<input type="hidden" name="id" value="<?php echo isset($id) ? $id : '' ?>">
 	
 		<!-- image -->
@@ -22,8 +25,11 @@ if(isset($_SESSION['login_id'])){
 				style=" display: block;
 				margin-left: auto;
 				margin-right: auto;
+				border-radius: 50%;
 				width: 60%;">
 		<?php endif; ?>
+
+	
 
 		<div class="form-group">
 			<label for="" class="control-label">Name</label>
@@ -84,25 +90,13 @@ if(isset($_SESSION['login_id'])){
 			</select>
 		</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
 		<div class="form-group">
 			<label for="" class="control-label">Email</label>
 			<input type="email" name="email" required="" class="form-control" value="<?php echo isset($email) ? $email : '' ?>">
 		</div>
 		<div class="form-group">
 			<label for="" class="control-label">Password</label>
-			<input type="password" name="password" class="form-control" <?php echo isset($email) ? '' : "required" ?>>
+			<input type="password" name="password" class="form-control" required <?php echo isset($email) ? '' : "required" ?>>
 			<?php if(isset($id)): ?>
 				<small><i>Leave this field blank if you dont want to change your password.</i></small>
 			<?php endif; ?>
@@ -114,6 +108,7 @@ if(isset($_SESSION['login_id'])){
 		<button class="button btn btn-danger btn-sm">Create</button>
 		<button class="button btn btn-secondary btn-sm" type="button" data-dismiss="modal">Cancel</button>
 	</form>
+</div>
 </div>
 
 <style>

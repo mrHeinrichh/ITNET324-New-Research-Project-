@@ -18,7 +18,9 @@
 </head>
 <style>
 	body{
-        background: #80808045;
+        /* background: #80808045; */
+        background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5));
+
   }
   .modal-dialog.large {
     width: 80% !important;
@@ -37,9 +39,10 @@
     border: unset;
     font-size: 27px;
     top: 0;
+    
 }
 #viewer_modal .modal-dialog {
-        width: 80%;
+    width: 80%;
     max-width: unset;
     height: calc(90%);
     max-height: unset;

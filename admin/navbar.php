@@ -8,8 +8,7 @@
 	}
 </style>
 
-<nav id="sidebar" class='mx-lt-5 bg-dark' >
-		
+<nav id="sidebar" class=''>
 		<div class="sidebar-list">
 				<a href="index.php?page=home" class="nav-item nav-home"><span class='icon-field'><i class="fa fa-tachometer-alt "></i></span> Dashboard</a>
 				<a href="index.php?page=complaints" class="nav-item nav-complaints"><span class='icon-field'><i class="fa fa-list-alt "></i></span> Complaints</a>

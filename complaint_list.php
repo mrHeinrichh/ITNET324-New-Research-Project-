@@ -18,7 +18,7 @@ include 'admin/db_connect.php';
 }
     .fr-wrapper {
         color:black;
-        background: #ffffff08;
+        background: #0000000;
         padding: 1em 1.5em;
         border-radius:5px;
     }

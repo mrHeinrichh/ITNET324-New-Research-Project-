@@ -32,10 +32,7 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 			            <th width="20%">Incident Address</th>
 						<th width="10%">Street</th>
 			            <th width="20%">Message</th>
-
 			            <th width="10%">Status</th>
-			      
-
 			            <th width="10%">Action</th>
 			          </tr>
 			        </thead>
@@ -52,13 +49,7 @@ if(!isset($_SESSION['login_type']) || $_SESSION['login_type'] != '1' & '2'){
 			            <td><?php echo $row['address'] ?></td>
 						<td><?php echo $row['street'] ?></td>
 						<td><?php echo $row['message'] ?></td>
-
 			            <td><?php echo $status[$row['status']] ?></td>
-	
-
-
-			  
-
 			            <td class="text-center">
 			            	<button class="btn btn-danger btn-sm m-0 view_btn" type="button" data-id="<?php echo $row['id'] ?>">View</button>
 			            </td>
